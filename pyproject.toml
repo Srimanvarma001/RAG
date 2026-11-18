@@ -1,0 +1,84 @@
+[project]
+name = "learning-rag"
+version = "0.1.0"
+description = "Beginner RAG project with PyTorch CUDA 13.0 and cuDNN 9.1"
+readme = "README.md"
+requires-python = ">=3.12,<3.14"
+
+dependencies = [
+    # ─────────────────────────────
+    # Core AI & GPU Stack
+    # ─────────────────────────────
+    "sentence-transformers>=5.2.0",
+    "torch",
+    "torchaudio",
+    "torchvision",
+    # ─────────────────────────────
+    # Data & Utilities
+    # ─────────────────────────────
+    "huggingface-hub>=0.36.0",
+    "ipywidgets>=8.1.8",
+    "jq>=1.10.0",
+    "matplotlib>=3.10.8",
+    "notebook>=7.5.2",
+    "openai>=2.15.0",
+    "pandas>=2.3.3",
+    "pip>=25.3",
+    "python-dotenv>=1.2.1",
+    "python-docs>=0.1.0",
+    "tiktoken>=0.12.0",
+    # ─────────────────────────────
+    # Document Processing
+    # ─────────────────────────────
+    "docx>=0.2.4",
+    "docx2txt>=0.9",
+    "msoffcrypto-tool>=6.0.0",
+    "openpyxl>=3.1.5",
+    "pymupdf>=1.26.7",
+    "pypdf>=6.6.0",
+    "python-docx>=1.2.0",
+    "unstructured[docx]>=0.18.27",
+    # ─────────────────────────────
+    # LangChain Ecosystem
+    # ─────────────────────────────
+    "langchain>=1.2.3",
+    "langchain-community>=0.4.1",
+    "langchain-groq>=1.1.1",
+    "langchain-huggingface>=1.2.0",
+    "langchain-openai>=1.1.7",
+    "langchain-text-splitters>=1.1.0",
+    "langchain-astradb>=0.6",
+    "langchain-google-genai>=4.2.0",
+    "langchain-google-vertexai>=3.2.2",
+    "langchain-experimental>=0.4.1",
+    # ─────────────────────────────
+    # Vector Databases
+    # ─────────────────────────────
+    "chromadb>=1.4.0",
+    "faiss-cpu>=1.13.2",
+    "astrapy>=2.1.0",
+    "pinecone==7.3.0",
+    "langchain-pinecone>=0.2.13",
+    "rank-bm25>=0.2.2",
+    "wikipedia>=1.4.0",
+    "langgraph>=1.0.6",
+    "arxiv>=2.4.0",
+    "langgraph-cli[inmem]>=0.4.12",
+    "ipykernel>=7.1.0",
+]
+
+# ─────────────────────────────
+# CUDA 13 PyTorch Index (uv)
+# ─────────────────────────────
+[[tool.uv.index]]
+name = "pytorch-cu130"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true
+
+# ─────────────────────────────
+# Package → Index Mapping
+# ─────────────────────────────
+[tool.uv.sources]
+torch = [{ index = "pytorch-cu130" }]
+torchvision = [{ index = "pytorch-cu130" }]
+torchaudio = [{ index = "pytorch-cu130" }]
