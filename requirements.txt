@@ -1,4 +1,32 @@
-langchain-huggingface
-sentence-transformers
-langchain-openai
-chromadb
+# ── Env / core ──
+python-dotenv>=1.2.1
+ipykernel>=7.1.0
+
+# ── LangChain ecosystem ──
+langchain>=1.2.3
+langchain-classic>=1.0.1
+langchain-community>=0.4.1
+langchain-core>=1.2.7
+langchain-text-splitters>=1.1.0
+langchain-groq>=1.1.1
+langchain-huggingface>=1.2.0
+langchain-openai>=1.1.7
+langchain-experimental>=0.4.1
+
+# ── Embeddings / models ──
+sentence-transformers>=5.2.0
+huggingface-hub>=0.36.0
+tiktoken>=0.12.0
+openai>=2.15.0
+
+# ── Vector stores & retrieval ──
+chromadb>=1.4.0
+faiss-cpu>=1.13.2
+rank-bm25>=0.2.2
+
+# ── Notebook / utils ──
+notebook>=7.5.2
+pandas>=2.3.3
+numpy
+matplotlib>=3.10.8
+scikit-learn
